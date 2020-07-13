@@ -4,7 +4,7 @@
   "description": "A good and functional Discord music and moderation bot in node.js.",
   "main": "server.js",
   "scripts": {
-    "stable": "node server.js"
+    "start": "node server.js"
   },
   "bin": "bin.js",
   "engines": {
