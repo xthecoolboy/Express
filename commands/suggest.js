@@ -1,6 +1,7 @@
 const { Command } = require('discord.js-commando');
 const { oneLine } = require('common-tags');
 const { RichEmbed } = require('discord.js');
+commandFile.run(client, message, args, ops);
 
 module.exports = class SuggestCommand extends Command {
   constructor(client) {
