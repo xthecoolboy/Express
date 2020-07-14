@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, ops) => {
 	const Discord = require('discord.js');
-	if(!message.member.roles.has('role-id-here') || !message.member.hasPermission(["KICK_MEMBERS", "BAN_MEMBERS"]) || !message.guild.owner) return message.reply("You haven't the permission to use this command!");
+if(!message.member.hasPermission('MANAGE_ROLES') || !message.member.hasPermission(["KICK_MEMBERS", "BAN_MEMBERS"]) || !message.guild.owner) return message.reply("You haven't the permission to use this command!");;
 	if(!message.guild.me.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"])) return message.reply("I don't have permission to manage roles!");
 	let toMute = message.mentions.members.first();
 	if(!toMute) return message.reply("Supply a user to be muted!");
