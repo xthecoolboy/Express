@@ -4,51 +4,9 @@ const active = new Map();
 const pingFrequency = (30 * 1000);
 const waitingTime = (10 * 1000);
 const fs = require('fs');
-const request = require('node-superfetch');
 
 const prefix = process.env.PREFIX;
 const ownerID = process.env.OWNERID;
-
-    if (msg === PREFIX + "EMBED") {
-
-        console.log(`${sender.tag} requested embed example command`); //This is a little trick I use: it will send a console log everytime someones request the command
-        message.reply({ //This will send a embed message: all the embed message documentation can be found on Discord.js official website
-            embed: {
-                color: 0x0099ff,
-                title: 'Discord.js',
-                url: 'https://discord.js.org',
-                author: {
-                    name: 'Dev par itsRems',
-                    icon_url: 'https://randomsite.com/your_image_url',
-                    url: 'https://itsrems.com',
-                },
-                description: 'This bot is developed by itsRems using Discord.js',
-                thumbnail: {
-                    url: 'https://randomsite.com/your_image_url',
-                },
-                fields: [
-                    {
-                        name: 'Title field',
-                        value: 'Description',
-                    },
-                    {
-                        name: '!embed', 
-                        value: 'Shows this message',
-                        inline: true, 
-                    }
-                ],
-                image: {
-                    url: 'https://randomsite.com/your_image_url',
-                },
-                timestamp: new Date(),
-                footer: {
-                    text: "Copyright © itsRems 2018",
-                    icon_url: 'https://randomsite.com/your_image_url',
-                },
-            },
-        });
-    };
-
 
 client.on("guildCreate", guild => {
 	console.log("Joined a new guild: " + guild.name);
