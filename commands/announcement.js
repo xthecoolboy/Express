@@ -93,6 +93,3 @@ module.exports = class NewsCommand extends Command {
     }
   }
 };
-        }
-    })
-}
