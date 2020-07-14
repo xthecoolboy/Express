@@ -1,5 +1,5 @@
-exports.run(client, message, args, ops);
 const Discord = require("discord.js");
+exports.run(client, message, args, ops);
 const client = new Discord.Client();
 
 module.exports = {
