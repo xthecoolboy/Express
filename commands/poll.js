@@ -1,3 +1,4 @@
+exports.run(client, message, args, ops);
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
