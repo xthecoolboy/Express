@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
   let inputmessage = args.join(' ');
 
   let embed = new Discord.RichEmbed()
-    .setColor(config.green)
+    .setColor(config.black)
     .setDescription(inputmessage)
 
   message.delete().catch(O_o => {});
