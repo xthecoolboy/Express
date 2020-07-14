@@ -4,6 +4,7 @@ const active = new Map();
 const pingFrequency = (30 * 1000);
 const waitingTime = (10 * 1000);
 const fs = require('fs');
+const request = require('node-superfetch');
 
 const prefix = process.env.PREFIX;
 const ownerID = process.env.OWNERID;
