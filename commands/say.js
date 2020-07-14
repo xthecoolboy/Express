@@ -5,5 +5,8 @@ exports.run = (client, message, args, ops) => {
     message.channel.messages.fetch({ limit: 1 }).then(messages => {
             message.channel.bulkDelete(messages)
     });
-    message.channel.send(toSay);
+    message.channel.send({embed: {
+  color: 3447003,
+  description: "A very simple Embed!"
+}});
 }
