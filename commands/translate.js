@@ -89,6 +89,4 @@ module.exports = {
 				return message.channel.send(embed);
 		} catch (err) {
 			return message.reply(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
-		}
-    },
 };
