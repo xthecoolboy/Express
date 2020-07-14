@@ -9,7 +9,7 @@ const request = require('node-superfetch');
 const prefix = process.env.PREFIX;
 const ownerID = process.env.OWNERID;
 
-    if (msg === prefix + "EMBED") {
+    if (msg === PREFIX + "EMBED") {
 
         console.log(`${sender.tag} requested embed example command`); //This is a little trick I use: it will send a console log everytime someones request the command
         message.reply({ //This will send a embed message: all the embed message documentation can be found on Discord.js official website
