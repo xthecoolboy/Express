@@ -1,19 +1,18 @@
-const Discord = require('discord.js')
+const Discord = require("discord.js");
 
-exports.run = function(bot, message, args){
-    let sentmessage = args.splice(1).join(' ');
-    let user = message.mentions.users.first();
-    if (message.mentions.users.size < 1) return message.channel.send("You must mention the user you are going to message.").catch(console.error);
-    if (message.length < 1) return message.channel.send('Please enter a message.');
-    const embed = new Discord.RichEmbed()
-    .setAuthor(`New message from ${message.author.tag}`, message.author.avatarURL)
-    .setColor(message.guild.me.displayHexColor)
-    .addField('Message', args.join(" "))
-    message.channel.send(`Message sent to ${user.tag}`)
-    const logembed = new Discord.RichEmbed()
-    .setAuthor('New message!', message.author.avatarURL)
-    .addField('User', message.author.avatarURL)
-    .addField('Message', args.join(" "))
-    .addField('To', user.tag)
-    bot.channels.get('369125980515860480').send({logembed, logembed})
+exports.run = (bot, message, args, func, cmd) => {
+    if (args[0] == null) {
+      const erro = new Discord.MessageEmbed()
+        .setTitle("Algo deu errado!")
+        .setDescription("Você esqueceu de informar o que eu vou dizer! Veja abaixo, alguns exemplos de como usar o comando `Say`")
+        .addField('**Sintaxe:**', 'la/say `Mensagem`')
+        .addField('**Exemplos**', 'la/say `Eu sou muito fofa :3`')
+        .setColor('#2A1250')
+        message.channel.send(erro)
+    } else if (args[0] != 0) {
+        const sayMessage = (args.join(" "))
+        const m = (sayMessage.replace("Sebola", `<@${message.author.id}>`).replace("sebola", `<@${message.author.id}>`))
+        message.delete().catch(O_o => {});
+        message.channel.send(m);
+    }
 }
