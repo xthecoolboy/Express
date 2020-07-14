@@ -2,11 +2,6 @@ exports.run = (client, message, args, ops) => {
     const Discord = require('discord.js');
     const request = require('node-superfetch');
 
-    const roles = message.guild.roles.cache.sort((a, b) => b.position - a.position).map(role => role.toString());
-    const members = message.guild.members.cache;
-    const channels = message.guild.channels.cache;
-    const emojis = message.guild.emojis.cache;
-
 module.exports = {
     name: 'translate',
     description: 'translate a specific string or body of text from a base language into a traget language',
