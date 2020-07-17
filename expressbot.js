@@ -15,7 +15,7 @@ client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   if (message.content.toLowerCase().startsWith(prefix + `staffcommands`)) {
-    const embed = new Discord.RichEmbed()
+    const embed = new Discord.MessageEmbed()
     .setTitle(`:mailbox_with_mail: Bot Help`)
     .setColor(0xCF40FA)
     .setDescription(`Hello! I'm from the game community,  Here are my commands:`)
@@ -24,7 +24,7 @@ client.on("message", (message) => {
   }
   
   if (message.content.toLowerCase().startsWith(prefix + `help`)) {
-    const embed = new Discord.RichEmbed()
+    const embed = new Discord.MessageEmbed()
     .setTitle(`:mailbox_with_mail: Bot Help`)
     .setColor(0xCF40FA)
     .setDescription(`Hello! I'm from the game community,  Here are my commands:`)
@@ -61,7 +61,7 @@ if (message.content.toLowerCase().startsWith(prefix + `new`)) {
             READ_MESSAGES: true
         });
         message.channel.send(`:white_check_mark: Your ticket has been created, #${c.name}.`);
-        const embed = new Discord.RichEmbed()
+        const embed = new Discord.MessageEmbed()
         .setColor(0xCF40FA)
         .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Team** will be here soon to help. <@&719986722766585919>`)
         .setTimestamp();
