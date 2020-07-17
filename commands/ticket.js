@@ -35,7 +35,7 @@ module.exports = {
                 type: "category",
             });
         }
-        return message.guild.channels.create(memberid, {
+        return message.guild.channels.create(message.author.username, {
             type: "text",
             permissionOverwrites: [
                 {
@@ -47,7 +47,7 @@ module.exports = {
                     allow: ["VIEW_CHANNEL", "SEND_MESSAGES"],
                 },
                 {
-                    id: message.author.id,
+                    id: message.author.username,
 allow: ["VIEW_CHANNEL", "SEND_MESSAGES"],
                 },
                 {
@@ -57,7 +57,7 @@ allow: ["VIEW_CHANNEL", "SEND_MESSAGES"],
             ],
             parent: tch.id,
         }).then(c => {message.channel.send("Ticket created!"),
-        message.guild.channels.cache.find(m => m.name.replace(/-/g, " ") == memberid).send(
+        message.guild.channels.cache.find(m => m.name.replace(/-/g, " ") == username).send(
             new MessageEmbed()
                 .setTitle("¡TICKET!")
                 .setDescription("Wait until a staff member helps you")
